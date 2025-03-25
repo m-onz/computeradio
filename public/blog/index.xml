@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on compute.radio</title>
+    <link>https://computeradio.neocities.org/blog/</link>
+    <description>Recent content in Blog on compute.radio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Mar 2025 12:14:49 -0400</lastBuildDate><atom:link href="https://computeradio.neocities.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Announcing compute.radio</title>
+      <link>https://computeradio.neocities.org/blog/announcing-new-show/</link>
+      <pubDate>Fri, 14 Mar 2025 12:14:49 -0400</pubDate>
+      
+      <guid>https://computeradio.neocities.org/blog/announcing-new-show/</guid>
+      <description>compute.radio is live!</description>
+    </item>
+    
+  </channel>
+</rss>

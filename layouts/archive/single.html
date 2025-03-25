@@ -1,0 +1,27 @@
+{{ define "main" }}
+<article class="archive-entry">
+  <header>
+    <h1>{{ .Title }}</h1>
+    <div class="meta">
+      <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+      {{ if .Params.host }}<span class="host">Host: {{ .Params.host }}</span>{{ end }}
+      {{ if .Params.duration }}<span class="duration">Duration: {{ .Params.duration }}</span>{{ end }}
+    </div>
+  </header>
+  
+  <div class="content">
+    {{ .Content }}
+  </div>
+  
+  {{ if .Params.audioUrl }}
+  <div class="audio-player">
+    <h3>Listen to the recording</h3>
+    <audio controls>
+      <source src="{{ .Params.audioUrl }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <a href="{{ .Params.audioUrl }}" class="download-link">Download episode</a>
+  </div>
+  {{ end }}
+</article>
+{{ end }}

@@ -1,0 +1,13 @@
+baseURL = "https://computeradio.neocities.org/"
+languageCode = "en-us"
+title = "compute.radio"
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  description = "Compute is a non-profit community radio, the home of computer musicians in London, the UK and beyond."
+  author = "Giovanni"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

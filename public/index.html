@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.111.3">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule | compute.radio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="site-title"><a href="/">compute.radio</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/live/">Live Stream</a></li>
+                    <li><a href="/archive/">Archive</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/about/">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            
+  <h1>Schedule</h1>
+  <p>17/03/2025 7pm GMT:</p>
+<p>Recording of Algorhythms at Peckham Carpet Shop.</p>
+<p>Music from:</p>
+<p>Greg - Mathr - Jaza - Tode - Pastagang - Boggo - Giovanni - m-onz - everysongiown - syntel8</p>
+<div class="player-container">
+  <h3>Radio player</h3>
+  <div class="player-controls">
+    <button class="play-button" id="playButton">▶</button>
+  </div>
+  <div class="now-playing">
+    <div id="track-info">Offline</div>
+  </div>
+  <audio id="radioPlayer" src="https://computeradio.out.airtime.pro//computeradio_a"></audio>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const player = document.getElementById('radioPlayer');
+    const playButton = document.getElementById('playButton');
+    const trackInfo = document.getElementById('track-info');
+    const djInfo = document.getElementById('dj-info');
+    playButton.addEventListener('click', function() {
+      if (player.paused) {
+        player.play();
+        playButton.innerHTML = '❚❚';
+      } else {
+        player.pause();
+        playButton.innerHTML = '▶';
+      }
+    });
+  });
+</script>
+
+
+  
+  
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 compute.radio. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/js/p5.js"></script>
+    <script src="/js/main.js"></script>
+    
+</body>
+</html>

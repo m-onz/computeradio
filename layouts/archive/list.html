@@ -1,0 +1,53 @@
+{{ define "main" }}
+<section class="archive-section">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  
+  <div class="filter-controls">
+    <label for="host-filter">Filter by host:</label>
+    <select id="host-filter">
+      <option value="">All Hosts</option>
+      <option value="DJ Morning">DJ Morning</option>
+      <option value="DJ Noon">DJ Noon</option>
+      <option value="DJ Night">DJ Night</option>
+      <option value="DJ Evening">DJ Evening</option>
+    </select>
+  </div>
+  
+  <div class="archive-grid">
+    {{ range .Pages.ByDate.Reverse }}
+    <div class="archive-item" data-host="{{ .Params.host }}">
+      <div class="archive-item-inner">
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <div class="archive-meta">
+          <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+          {{ if .Params.host }}<span class="host">Host: {{ .Params.host }}</span>{{ end }}
+          {{ if .Params.duration }}<span class="duration">{{ .Params.duration }}</span>{{ end }}
+        </div>
+        <p class="summary">{{ .Description }}</p>
+        <a href="{{ .Permalink }}" class="listen-button">Listen Now</a>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hostFilter = document.getElementById('host-filter');
+  const archiveItems = document.querySelectorAll('.archive-item');
+  
+  hostFilter.addEventListener('change', function() {
+    const selectedHost = this.value;
+    
+    archiveItems.forEach(item => {
+      if (!selectedHost || item.dataset.host === selectedHost) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+{{ end }}

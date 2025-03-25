@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  
+  {{ if eq .Section "archive" }}
+    <div class="archive-list">
+      {{ range .Pages.ByDate.Reverse }}
+        <div class="archive-item">
+          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <div class="archive-date">{{ .Date.Format "January 2, 2006" }}</div>
+          <p>{{ .Summary }}</p>
+          <a href="{{ .Permalink }}" class="read-more">Listen to recording</a>
+        </div>
+      {{ end }}
+    </div>
+  {{ else if eq .Section "blog" }}
+    <div class="blog-list">
+      {{ range .Pages.ByDate.Reverse }}
+        <div class="blog-post">
+          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <div class="post-meta">{{ .Date.Format "January 2, 2006" }}</div>
+          <p>{{ .Summary }}</p>
+          <a href="{{ .Permalink }}" class="read-more">Read more</a>
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}

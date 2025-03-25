@@ -1,0 +1,47 @@
+{{ define "main" }}
+<section class="blog-section">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  
+  <div class="featured-post">
+    {{ range first 1 .Pages.ByDate.Reverse }}
+    <article class="featured">
+      {{ if .Params.image }}
+      <div class="featured-image">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+      </div>
+      {{ end }}
+      <div class="featured-content">
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div class="meta">
+          <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+          {{ if .Params.author }}<span class="author">By {{ .Params.author }}</span>{{ end }}
+        </div>
+        <p class="summary">{{ .Description | default (.Summary | truncate 160) }}</p>
+        <a href="{{ .Permalink }}" class="read-more">Read More</a>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+  
+  <div class="blog-grid">
+    {{ range after 1 .Pages.ByDate.Reverse }}
+    <article class="blog-card">
+      {{ if .Params.image }}
+      <div class="card-image">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+      </div>
+      {{ end }}
+      <div class="card-content">
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <div class="meta">
+          <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+        </div>
+        <p class="summary">{{ .Description | default (.Summary | truncate 100) }}</p>
+        <a href="{{ .Permalink }}" class="read-more">Read More</a>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
