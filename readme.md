@@ -16,3 +16,10 @@ Add neocities API key to ~/.profile or environment variables
 ```
 export NEOCITIES_API_KEY=xxxx
 ```
+
+Adding pages
+
+```
+hugo new blog/new-website.md
+hugo new archive/11-01-2025-new-archive.md
+```

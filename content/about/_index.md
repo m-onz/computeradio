@@ -2,7 +2,7 @@
 title: "About Us"
 ---
 
-Compute is a non-profit community radio, the home of computer musicians in London, the UK and beyond.
+Compute is a non-profit community radio, the home of computer musicians in London, the UK and beyond..........
 
 ## Our Team
 
