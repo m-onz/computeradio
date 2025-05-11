@@ -3,7 +3,7 @@
 
 TODO write a readme
 
-# notes
+# Notes
 
 Make a file smaller to fit within 100MB size limit:
 
