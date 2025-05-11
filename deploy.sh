@@ -1,3 +1,3 @@
-export NEOCITIES_API_KEY=7c76457629f805ab0c3def1df17a2718
+#export NEOCITIES_API_KEY=XXXX
 hugo
 neocities push ./public
