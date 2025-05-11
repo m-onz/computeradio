@@ -1,4 +1,4 @@
-baseURL = "https://computeradio.neocities.org/"
+baseURL = "https://compute.radio"
 languageCode = "en-us"
 title = "compute.radio"
 disableKinds = ['taxonomy', 'term']
